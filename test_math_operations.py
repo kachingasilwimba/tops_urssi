@@ -1,4 +1,4 @@
-from math_opertions import add, subtract, multiply, divide
+from math_opertions import add, subtract, multiply, divide, mean
 import pytest
 
 # Test cases
@@ -44,3 +44,10 @@ def test_divide():
     assert divide(1, 1) == 1
 
 # @pytest.mark.parametrize("a, b, expected", [(1, 2, 0.5), (0, 1, 0)])
+
+
+@pytest.mark.parametrize("numbers, expected", [([1, 2, 3, 4, 5], 3), ([1, 2, 3, 4], 2.5), ([1, 2, 3], 2)])
+
+def test_mean(numbers, expected):
+    if numbers:
+        assert mean(numbers) == expected

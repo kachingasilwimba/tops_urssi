@@ -1,3 +1,5 @@
+import numpy as np
+
 def add(a, b):
     "This function adds two numbers"
     return a + b
@@ -19,3 +21,9 @@ def divide(a, b):
 
 
 print(add(2, 3))
+
+def mean(numbers):
+    return np.mean(numbers)
+
+numbers = [1, 2, 3, 4, 5]
+print(mean(numbers))
